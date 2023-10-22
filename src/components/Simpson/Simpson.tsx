@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import {ISimpson} from "../../Inyerfaces/SimpsonInterface";
+
+import {ISimpson} from "../../Interfaces/SimpsonInterface";
 import "./Simpson.css"
 
 interface IProps {
@@ -9,7 +10,7 @@ interface IProps {
 const Simpson:FC<IProps> = ({item}) => {
     const {name, surname, age, photo, info }= item;
     return (
-        <div className={'member'}>
+        <div className='member'>
             <h2>{name}, {surname}, {age}</h2>
             <img src={photo} alt={name}/>
             <p>{info}</p>
