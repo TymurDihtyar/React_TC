@@ -1,0 +1,4 @@
+.allPosts {
+    display: flex;
+    flex-wrap: wrap;
+}
