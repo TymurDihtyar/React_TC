@@ -1,12 +1,10 @@
-import React from 'react';
-import {useState} from "react";
-import {useEffect} from "react";
+import {useState, useEffect} from "react";
 
-import {IPosts} from "../interface/interface";
-import {postsService} from "../service/postsService";
+import {IPosts} from "../../interface/interface";
+import {postsService} from "../../service/postsService";
 import {Post} from "../Post/Post";
-import css from './Posts.module.css'
 import {PostDetail} from "../PostDetail/PostDetail";
+import css from './Posts.module.css'
 
 const Posts = () => {
     const [posts, setPosts] = useState<IPosts[]>([]);

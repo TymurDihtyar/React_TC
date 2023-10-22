@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 
-import {IPosts} from "../interface/interface";
+import {IPosts} from "../../interface/interface";
 import css from './Post.module.css'
 
 interface IProps {
