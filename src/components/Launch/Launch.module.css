@@ -1,0 +1,24 @@
+.Launch {
+    width: calc(20% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(152deg, #050505 0%, #a20e0e 100%);
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 5px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+img {
+    width: 250px;
+}
+h3 {
+    margin-bottom: 0;
+}
