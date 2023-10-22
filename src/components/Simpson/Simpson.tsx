@@ -1,14 +1,14 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 
-import {ISimpson} from "../../Interfaces/SimpsonInterface";
+import {ISimpson} from "../../interfaces/simpsonInterface";
 import "./Simpson.css"
 
 interface IProps {
     item: ISimpson
 }
 
-const Simpson:FC<IProps> = ({item}) => {
-    const {name, surname, age, photo, info }= item;
+const Simpson: FC<IProps> = ({item}) => {
+    const {name, surname, age, photo, info} = item;
     return (
         <div className='member'>
             <h2>{name}, {surname}, {age}</h2>

@@ -1,8 +1,6 @@
-import React from 'react';
-
-import {simpsons} from "../constants/items";
+import {simpsons} from "../../constants/constants";
 import {Simpson} from "../Simpson/Simpson";
-import {ISimpson} from "../../Interfaces/SimpsonInterface";
+import {ISimpson} from "../../interfaces/simpsonInterface";
 import "./Simpsons.css";
 
 
