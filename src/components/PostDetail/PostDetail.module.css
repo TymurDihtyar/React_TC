@@ -1,0 +1,20 @@
+.PostDetail {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1vh 1vh 1vh black;
+    background: linear-gradient(152deg, #bf8d39 0%, #000 100%);
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: 200px;
+    font-family: monospace;
+}
+p {
+    font-size: 20px;
+}
