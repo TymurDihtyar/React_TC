@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
 import {IPerson} from "../interfaces/interfacesPerson";
+import './Person.css'
 
 interface IProps {
     item:IPerson
@@ -9,7 +10,7 @@ interface IProps {
 const Person:FC<IProps> = ({item}) => {
     const {id, name, image, gender, status, species} = item
     return (
-        <div>
+        <div className={'element'}>
             <h2>ID:{id} {name}</h2>
             <img src={image} alt={name}/>
             <p>Status: {status} Gender: {gender} Species: {species}</p>
