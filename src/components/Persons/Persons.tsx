@@ -8,9 +8,8 @@ const Persons = () => {
     const [persons, setPersons] = useState<IPerson[]>([]);
 
     useEffect(() => {
-        personServises.getAll().then(({data})=>setPersons(data))
-    },[]);
-
+        personServises.getAll().then(({data}) => setPersons(data.results))
+    }, []);
 
     return (
         <div>

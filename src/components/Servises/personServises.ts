@@ -1,9 +1,11 @@
 import {axiosServises, IRes} from "./axiosServises";
 import {urls} from "../constants/constants";
-import {IPerson} from "../interfaces/interfacesPerson";
+import {IData, IPerson} from "../interfaces/interfacesPerson";
+
+
 
 const personServises = {
-    getAll: (): IRes<IPerson[]> => axiosServises.get(urls.persons.base),
+    getAll: (): IRes<IData> => axiosServises.get(urls.persons.base),
     getById: (id: number): IRes<IPerson> => axiosServises.get(urls.persons.byId(id))
 }
 

@@ -18,3 +18,6 @@ export interface IPerson {
     url: string
     created: string
 }
+export interface IData {
+    results: IPerson[]
+}
