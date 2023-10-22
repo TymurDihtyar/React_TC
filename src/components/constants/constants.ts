@@ -4,7 +4,7 @@ const person = '/character'
 const urls = {
     persons:{
         base: person,
-        byId: (id:number) => `${baseURL}${person}/${id}`
+        byId: (id:number) => `${person}/${id}`
     }
 }
 
