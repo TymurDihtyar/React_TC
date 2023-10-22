@@ -1,7 +1,6 @@
 import {axiosServises, IRes} from "./axiosServises";
 import {urls} from "../constants/constants";
-import {IData, IPerson} from "../interfaces/interfacesPerson";
-
+import {IData} from "../interfaces/interfacesPerson";
 
 
 const personServises = {
