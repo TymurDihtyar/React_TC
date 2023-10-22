@@ -1,13 +1,13 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 
-import {IPerson} from "../interfaces/interfacesPerson";
+import {IPerson} from "../../interfaces/interfacesPerson";
 import './Person.css'
 
 interface IProps {
-    item:IPerson
+    item: IPerson
 }
 
-const Person:FC<IProps> = ({item}) => {
+const Person: FC<IProps> = ({item}) => {
     const {id, name, image, gender, status, species} = item
     return (
         <div className={'element'}>

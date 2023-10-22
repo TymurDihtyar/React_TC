@@ -1,8 +1,7 @@
-import React from 'react';
-
-import {IPerson} from "../interfaces/interfacesPerson";
 import {useState, useEffect} from "react";
-import {personServises} from "../Servises/personServises";
+
+import {IPerson} from "../../interfaces/interfacesPerson";
+import {personServises} from "../../servises/personServises";
 import {Person} from "../Person/Person";
 import './Persons.css'
 
