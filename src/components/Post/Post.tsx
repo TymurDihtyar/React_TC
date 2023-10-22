@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+
 import {IPosts} from "../interface/interface";
 import css from './Post.module.css'
 
