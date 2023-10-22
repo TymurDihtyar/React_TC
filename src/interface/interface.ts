@@ -16,54 +16,11 @@ export interface ISpace {
         rocket_name: string
         rocket_type: string
         first_stage: {
-            cores: [
-                {
-                    core_serial: string
-                    flight: number
-                    block: null,
-                    gridfins: boolean
-                    legs: boolean
-                    reused: boolean
-                    land_success: null,
-                    landing_intent: boolean
-                    landing_type: null,
-                    landing_vehicle: null
-                }
-            ]
+            cores: ICores[]
         },
         second_stage: {
             block: number
-            payloads: [
-                {
-                    payload_id: string
-                    norad_id: [],
-                    reused: boolean
-                    customers: string[]
-                    nationality: string
-                    manufacturer: string
-                    payload_type: string
-                    payload_mass_kg: number
-                    payload_mass_lbs: number
-                    orbit: string
-                    orbit_params: {
-                        reference_system: string
-                        regime: string
-                        longitude: null,
-                        semi_major_axis_km: null,
-                        eccentricity: null,
-                        periapsis_km: number
-                        apoapsis_km: number
-                        inclination_deg: number
-                        period_min: null,
-                        lifespan_years: null,
-                        epoch: null,
-                        mean_motion: null,
-                        raan: null,
-                        arg_of_pericenter: null,
-                        mean_anomaly: null
-                    }
-                }
-            ]
+            payloads: IPlayloads[]
         },
         fairings: {
             reused: boolean
@@ -108,4 +65,47 @@ export interface ISpace {
         webcast_liftoff: number
     },
     crew: null
+}
+
+interface ICores {
+    core_serial: string
+    flight: number
+    block: null,
+    gridfins: boolean
+    legs: boolean
+    reused: boolean
+    land_success: null,
+    landing_intent: boolean
+    landing_type: null,
+    landing_vehicle: null
+}
+
+interface IPlayloads {
+    payload_id: string
+    norad_id: [],
+    reused: boolean
+    customers: string[]
+    nationality: string
+    manufacturer: string
+    payload_type: string
+    payload_mass_kg: number
+    payload_mass_lbs: number
+    orbit: string
+    orbit_params: {
+        reference_system: string
+        regime: string
+        longitude: null,
+        semi_major_axis_km: null,
+        eccentricity: null,
+        periapsis_km: number
+        apoapsis_km: number
+        inclination_deg: number
+        period_min: null,
+        lifespan_years: null,
+        epoch: null,
+        mean_motion: null,
+        raan: null,
+        arg_of_pericenter: null,
+        mean_anomaly: null
+    }
 }

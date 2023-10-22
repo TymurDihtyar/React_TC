@@ -1,8 +1,7 @@
-import React from 'react';
 import {useState, useEffect} from "react";
 
 import {ISpace} from "../../interface/interface";
-import {launchesService} from "../service/launchesService";
+import {launchesService} from "../../service/launchesService";
 import {Launch} from "../Launch/Launch";
 import css from './Launches.module.css'
 

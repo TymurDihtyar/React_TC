@@ -1,6 +1,6 @@
 import {axiosService, IRes} from "./axiosService";
 import {urls} from "../constants/constants";
-import {ISpace} from "../../interface/interface";
+import {ISpace} from "../interface/interface";
 
 const launchesService = {
     getAll: ():IRes<ISpace[]> => axiosService.get(urls.launches.base),
