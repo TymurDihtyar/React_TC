@@ -1,9 +1,10 @@
 import React from 'react';
+import {Persons} from "./components/Persons/Persons";
 
 const App = () => {
   return (
       <div>
-        App
+        <Persons/>
       </div>
   );
 };
