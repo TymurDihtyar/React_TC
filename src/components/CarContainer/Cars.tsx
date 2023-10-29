@@ -6,21 +6,22 @@ import {Car} from "./Car";
 import {ISetState} from "../../types/ISetState";
 
 interface IProps {
-    flag:boolean
+    flag: boolean
     setCarForUpdate: ISetState<ICar>
+    trigger: () => void
 }
 
-const Cars:FC<IProps>  = ({flag, setCarForUpdate}) => {
+const Cars: FC<IProps> = ({flag, setCarForUpdate, trigger}) => {
     const [cars, setCars] = useState<ICar[]>([])
 
 
     useEffect(() => {
-        carService.getAll().then(({data})=>setCars(data))
-    },[flag]);
+        carService.getAll().then(({data}) => setCars(data))
+    }, [flag]);
 
     return (
         <div>
-            {cars.map(item=> <Car key={item.id} item={item} setCarForUpdate={setCarForUpdate}/>)}
+            {cars.map(item => <Car key={item.id} item={item} setCarForUpdate={setCarForUpdate} trigger={trigger}/>)}
         </div>
     );
 };

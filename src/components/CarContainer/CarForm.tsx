@@ -41,11 +41,11 @@ const CarForm: FC<IProps> = ({trigger, carForUpdate, setCarForUpdate}) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit(save)}>
+            <form onSubmit={handleSubmit(carForUpdate ? update: save)}>
                 <input type="text" placeholder={'brand'}{...register('brand')}/>
                 <input type="text" placeholder={'price'}{...register('price')}/>
                 <input type="text" placeholder={'year'}{...register('year')}/>
-                <button disabled={!isValid}>submit</button>
+                <button disabled={!isValid}>{carForUpdate ? 'update': 'save'}</button>
             </form>
             {errors.brand && <div>{errors.brand.message}</div>}
             {errors.price && <div>{errors.price.message}</div>}

@@ -16,8 +16,11 @@ const CarsPage = () => {
         <div>
             <CarForm trigger={trigger} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate}/>
             <hr/>
-            <Cars flag={flag} setCarForUpdate={setCarForUpdate}/>
-            <Outlet/>
+            <div style={{display:'flex',   justifyContent:'space-around'}}>
+                <Cars flag={flag} setCarForUpdate={setCarForUpdate} trigger={trigger}/>
+                <Outlet/>
+            </div>
+
         </div>
     );
 };
