@@ -1,3 +1,3 @@
 import {store} from "../redux/store";
 
-const RootState =
+const RootState = ReturnType<typeof store.getState>
