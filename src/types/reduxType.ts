@@ -1,3 +1,5 @@
 import {store} from "../redux/store";
+import {useDispatch} from "react-redux";
 
-const RootState = ReturnType<typeof store.getState>
+type RootState = ReturnType<typeof store.getState>
+type AppDispatch = typeof useDispatch<>()
