@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {IEpiside} from "../../interfaces/episodeInterface";
+import {IEpiside, IEpisodes} from "../../interfaces/episodeInterface";
 import {AxiosError} from "axios";
 import {episodesService} from "../../services/episodesService";
 
@@ -17,7 +17,7 @@ const initialState: IState = {
     episodeName: null,
 }
 
-const getEpisodes = createAsyncThunk<IEpiside[], { page: string }>(
+const getEpisodes = createAsyncThunk<IEpisodes, { page: string }>(
     'episodesSlice/getEpisodes',
     async ({page}, {rejectWithValue}) => {
         try {
