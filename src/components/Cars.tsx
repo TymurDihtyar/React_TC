@@ -1,14 +1,19 @@
-import {FC, PropsWithChildren} from 'react';
+import {useAppDispatch, useAppSelector} from "../hooks/reduxHooks";
+import {Car} from "./Car";
+import {useEffect} from "react";
+import {carActions} from "../redux/slices/carSlice";
 
-interface IProps extends PropsWithChildren {
+const Cars = () => {
+    const {cars, triger} = useAppSelector(state => state.cars)
+    const dispatch = useAppDispatch()
 
-}
-
-const Cars:FC<IProps> = ({}) => {
+    useEffect(() => {
+        dispatch(carActions.getAll())
+    }, [dispatch, triger]);
 
     return (
         <div>
-
+            {cars.map(car=> <Car key={car.id} car={car}/>)}
         </div>
     );
 };
