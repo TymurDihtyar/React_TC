@@ -2,8 +2,8 @@ export interface IEpisodes {
     info: {
         count: number
         pages: number
-        next: string | null
-        prev: string | null
+        next: string
+        prev: string
     },
     results: IEpiside[]
 }

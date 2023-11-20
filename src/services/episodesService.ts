@@ -4,5 +4,7 @@ import {IRes} from "../types/resType";
 import {IEpisodes} from "../interfaces/episodeInterface";
 
 const episodesService = {
-    getAllEpisodes: (): IRes<IEpisodes> => apiService.get(urls.episodes)
+    getAllEpisodes: (page:string): IRes<IEpisodes> => apiService.get(urls.episodes, {params:{page}})
 }
+
+export {episodesService}
