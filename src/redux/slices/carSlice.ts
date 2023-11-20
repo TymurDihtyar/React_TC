@@ -40,24 +40,24 @@ const create = createAsyncThunk<void, { car: ICar }>(
     }
 )
 
-const update = createAsyncThunk<void, {id:number, car:ICar}>(
+const update = createAsyncThunk<void, { id: number, car: ICar }>(
     'carSlice/update',
-    async ({id, car}, {rejectWithValue})=> {
+    async ({id, car}, {rejectWithValue}) => {
         try {
             await carsService.update(id, car)
-        }catch (e) {
+        } catch (e) {
             const err = e as AxiosError
             return rejectWithValue(err.response?.data)
         }
     }
 )
 
-const deleteById = createAsyncThunk<void, {id:number}>(
+const deleteById = createAsyncThunk<void, { id: number }>(
     'createSlice/deleteById',
-    async ({id}, {rejectWithValue})=> {
+    async ({id}, {rejectWithValue}) => {
         try {
             await carsService.delete(id)
-        }catch (e) {
+        } catch (e) {
             const err = e as AxiosError
             return rejectWithValue(err.response?.data)
         }
