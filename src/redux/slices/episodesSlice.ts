@@ -33,7 +33,11 @@ const getEpisodes = createAsyncThunk<IEpisodes, { page: string }>(
 const episodesSlice = createSlice({
     name: 'episodesSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setEpisodeName: (state, action) => {
+            state.episodeName = action.payload
+        }
+    },
     extraReducers: builder =>
         builder
             .addCase(getEpisodes.fulfilled, (state, action) => {
@@ -42,7 +46,6 @@ const episodesSlice = createSlice({
                 state.prevPage = prev
                 state.nextPage = next
             })
-
 })
 
 const {reducer: episodesReducer, actions} = episodesSlice

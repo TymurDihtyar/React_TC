@@ -7,7 +7,7 @@ const urls = {
     episodes,
     characters:{
         characters,
-        getById: (ids: string) => `${characters}/${ids}`
+        getByIds: (ids: string) => `${characters}/${ids}`
     }
 }
 

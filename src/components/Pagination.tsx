@@ -2,6 +2,8 @@ import {FC, PropsWithChildren} from 'react';
 import {SetURLSearchParams} from "react-router-dom";
 import {useAppSelector} from "../hooks/reduxHooks";
 
+import css from './Pagination.module.css'
+
 interface IProps extends PropsWithChildren {
     setQuery: SetURLSearchParams
 }
@@ -23,7 +25,7 @@ const Pagination: FC<IProps> = ({setQuery}) => {
     }
 
     return (
-        <div>
+        <div className={css.buts}>
             <button disabled={!prevPage} onClick={prev}>prev</button>
             <button disabled={!nextPage} onClick={next}>next</button>
         </div>

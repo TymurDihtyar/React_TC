@@ -1,0 +1,15 @@
+.Character {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.Character img {
+    width: 100%;
+}
