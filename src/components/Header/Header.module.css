@@ -1,3 +1,17 @@
 .Header {
-
+    display: flex;
+    justify-content: right;
+    background-color: blue;
+    height: 50px;
+    align-items: center;
+}
+.Header a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 0 10px;
+}
+.user{
+    color: white;
+    font-size: 15px;
 }
